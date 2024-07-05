@@ -5,7 +5,7 @@ function payBill() {
 
     if (name && cedula && invoice) {
         // URL del webhook
-        const webhookUrl = 'https://your-webhook-url.com';
+        const webhookUrl = 'https://hook.us1.make.com/kfj2en8itpcgat2lhydo2ao6vfai163s';
 
         // Datos a enviar al webhook
         const data = {
