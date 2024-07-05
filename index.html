@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emulación de Pago de Recibos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pago de Recibos</h1>
+        <form id="payment-form">
+            <label for="name">Nombre del Usuario:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required>
+            
+            <label for="invoice">Número de Factura:</label>
+            <input type="text" id="invoice" name="invoice" value="123456789" readonly>
+            
+            <button type="button" onclick="payBill()">Pagar</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
