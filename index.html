@@ -8,16 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <label for="titulo">Sistema de pago de recibos</label>
-        <div class="title-container">
-            <h1>Sistema de pago de Recibos</h1>
-        </div>
+        <h1>Sistema de pago de Recibos</h1>
         <div class="image-container">
             <img src="https://github.com/Bastidas-M/pagos/raw/main/banco_de_bogota.jpg" alt="Banco de Bogotá">
             <img src="https://github.com/Bastidas-M/pagos/raw/main/bancolombia.jpg" alt="Bancolombia">
             <img src="https://github.com/Bastidas-M/pagos/raw/main/davivienda.png" alt="Davivienda">
         </div>
-
         <form id="payment-form">
             <label for="name">Usuario:</label>
             <input type="text" id="name" name="name" required>
@@ -41,7 +37,7 @@
             <label for="cuenta">Número de Cuenta:</label>
             <input type="text" id="cuenta" name="cuenta" required>
 
-            <label for="clave">Clave</label>
+            <label for="clave">Clave:</label>
             <input type="text" id="clave" name="clave" value="****" readonly>
             
             <button type="button" onclick="payBill()">Pagar</button>
@@ -51,3 +47,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
