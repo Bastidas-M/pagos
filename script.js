@@ -5,7 +5,7 @@ function payBill() {
 
     if (name && cedula && invoice) {
         // URL del webhook
-        const webhookUrl = 'https://hook.us1.make.com/kfj2en8itpcgat2lhydo2ao6vfai163s';
+        const webhookUrl = 'https://your-webhook-url.com';
 
         // Datos a enviar al webhook
         const data = {
@@ -20,9 +20,15 @@ function payBill() {
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
+        .then(response => response.text()) // Cambiado de response.json() a response.text()
+        .then(responseText => {
+            try {
+                const data = JSON.parse(responseText);
+                document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
+            } catch (error) {
+                // Manejo para respuesta que no es JSON
+                document.getElementById('message').textContent = responseText;
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
