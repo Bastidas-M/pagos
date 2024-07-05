@@ -82,14 +82,15 @@ select {
 
 .image-container {
     display: flex;
-    justify-content: center; /* Centrar la imagen horizontalmente */
-    align-items: center; /* Centrar la imagen verticalmente */
+    justify-content: space-around; /* Distribuir uniformemente las imágenes */
+    align-items: center; /* Centrar verticalmente las imágenes */
     margin-bottom: 20px;
 }
 
+/* Estilos para las imágenes */
 .image-container img {
-    max-width: 200px; /* Tamaño máximo de la imagen */
+    max-width: 150px; /* Tamaño máximo de las imágenes */
     height: auto;
-    border-radius: 5px; /* Bordes redondeados para la imagen */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
