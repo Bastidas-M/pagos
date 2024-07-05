@@ -79,3 +79,17 @@ select {
     font-size: 16px;
     box-sizing: border-box;
 }
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Centrar la imagen horizontalmente */
+    align-items: center; /* Centrar la imagen verticalmente */
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 200px; /* Tamaño máximo de la imagen */
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
