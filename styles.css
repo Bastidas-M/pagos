@@ -86,11 +86,12 @@ select {
     align-items: center; /* Centrar verticalmente las imágenes */
     margin-top:200px;
     margin-bottom: 20px;
-    background-color: transparent;
+    
 }
 
 /* Estilos para las imágenes */
 .image-container img {
+    background-color: transparent;
     max-width: 150px; /* Tamaño máximo de las imágenes */
     height: auto;
     border-radius: 5px;
