@@ -4,27 +4,29 @@ body {
     color: #333;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Cambiado de center a flex-start */
     height: 100vh;
-    margin: 20px;
+    margin: 0; /* Cambiado de 20px a 0 */
+    padding: 20px; /* Añadido padding */
+    box-sizing: border-box;
 }
 
 .container {
     max-width: 600px;
-    margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 500px;
+    width: 100%;
     text-align: center;
+    margin-top: 20px; /* Añadido margen superior */
 }
 
 h1 {
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    margin-top: 20px; /* Ajustado para reducir el espacio superior */
+    margin-top: 0; /* Ajustado para eliminar espacio superior */
 }
 
 label {
@@ -84,7 +86,7 @@ select {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px; /* Ajustado para eliminar el margen superior */
+    margin-bottom: 20px;
 }
 
 .image-container img {
@@ -98,3 +100,4 @@ select {
 .title-container {
     margin-bottom: 20px;
 }
+
