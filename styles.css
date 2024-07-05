@@ -86,6 +86,7 @@ select {
     align-items: center; /* Centrar verticalmente las imágenes */
     margin-top:200px;
     margin-bottom: 20px;
+    background-color: transparent;
 }
 
 /* Estilos para las imágenes */
