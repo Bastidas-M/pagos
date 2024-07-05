@@ -84,6 +84,7 @@ select {
     display: flex;
     justify-content: space-around; /* Distribuir uniformemente las imágenes */
     align-items: center; /* Centrar verticalmente las imágenes */
+    margin-top:20px;
     margin-bottom: 20px;
 }
 
