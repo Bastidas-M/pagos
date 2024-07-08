@@ -34,8 +34,10 @@ function payBill() {
                     confirmButtonText: 'Aceptar'
                 });
                 document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
+                console.log("entra1");
             } catch (error) {
                 // Manejo para respuesta que no es JSON
+                console.log("entra2");
                 document.getElementById('message').textContent = responseText;
             }
         })
