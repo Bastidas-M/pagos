@@ -27,6 +27,12 @@ function payBill() {
         .then(responseText => {
             try {
                 const data = JSON.parse(responseText);
+                Swal.fire({
+                    title: 'Éxito',
+                    text: `Pago realizado con éxito para la factura ${invoice}.`,
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
                 document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
             } catch (error) {
                 // Manejo para respuesta que no es JSON
