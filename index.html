@@ -45,5 +45,32 @@
         <div id="message"></div>
     </div>
     <script src="script.js"></script>
+    <script>
+        // Función para obtener parámetros de la URL
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split("&");
+            for (const pair of pairs) {
+                const [key, value] = pair.split("=");
+                params[decodeURIComponent(key)] = decodeURIComponent(value.replace(/\+/g, " "));
+            }
+            return params;
+        }
+
+        // Función para llenar el formulario con parámetros de la URL
+        function fillFormWithUrlParams() {
+            const params = getQueryParams();
+            if (params.name) {
+                document.getElementById('name').value = params.name;
+            }
+            if (params.cedula) {
+                document.getElementById('cedula').value = params.cedula;
+            }
+        }
+
+        // Llenar el formulario cuando la página se carga
+        document.addEventListener('DOMContentLoaded', fillFormWithUrlParams);
+    </script>
 </body>
 </html>
