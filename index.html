@@ -22,10 +22,10 @@
             <input type="text" id="cedula" name="cedula" required>
 
             <label for="precio">Valor($):</label>
-            <input type="text" id="precio" name="precio" value="28000" readonly>
+            <input type="text" id="precio" name="precio" readonly>
             
             <label for="factura">Número de Factura:</label>
-            <input type="text" id="factura" name="factura" value="123456789" readonly>
+            <input type="text" id="factura" name="factura" readonly>
 
             <label for="bank">Seleccione su Banco:</label>
             <select id="bank" name="bank" required>
@@ -66,6 +66,12 @@
             }
             if (params.cedula) {
                 document.getElementById('cedula').value = params.cedula;
+            }
+            if (params.precio) {
+                document.getElementById('precio').value = params.precio;
+            }
+            if (params.factura) {
+                document.getElementById('factura').value = params.factura
             }
         }
 
