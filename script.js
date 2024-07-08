@@ -23,7 +23,10 @@ function payBill() {
             },
             body: JSON.stringify(data)
         })
-        .then(response => response.text()) // Cambiado de response.json() a response.text()
+        .then(response => {
+            console.log(response);
+            response.text();
+        }) // Cambiado de response.json() a response.text()
         .then(responseText => {
             try {
                 const data = JSON.parse(responseText);
