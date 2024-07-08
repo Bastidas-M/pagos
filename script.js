@@ -24,28 +24,29 @@ function payBill() {
             body: JSON.stringify(data)
         })
         .then(response => {
-            console.log(response);
-            response.text();
-        }) // Cambiado de response.json() a response.text()
-        .then(responseText => {
-            try {
-                const data = JSON.parse(responseText);
-                Swal.fire({
-                    title: 'Éxito',
-                    text: `Pago realizado con éxito para la factura ${invoice}.`,
-                    icon: 'success',
-                    confirmButtonText: 'Aceptar'
-                });
-                document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
-                console.log("entra1");
-            } catch (error) {
-                // Manejo para respuesta que no es JSON
-                console.log("entra2");
-                document.getElementById('message').textContent = responseText;
+            if (response.ok) {
+                return response.text(); // Convertir la respuesta a texto
+            } else {
+                throw new Error('La solicitud no fue exitosa. Código de estado: ' + response.status);
             }
         })
+        .then(responseText => {
+            // Aquí puedes realizar más operaciones con la respuesta si es necesario
+            console.log('Respuesta del servidor:', responseText);
+
+            // Mostrar mensaje de éxito
+            Swal.fire({
+                title: 'Éxito',
+                text: `Pago realizado con éxito para la factura ${invoice}.`,
+                icon: 'success',
+                confirmButtonText: 'Aceptar'
+            });
+
+            // Opcional: Actualizar mensaje en el HTML
+            document.getElementById('message').textContent = `Pago realizado con éxito para la factura ${invoice}.`;
+        })
         .catch((error) => {
-            console.error('Error:', error);
+            console.error('Error en la solicitud:', error);
             document.getElementById('message').textContent = 'Error al realizar el pago. Intente de nuevo.';
         });
     } else {
