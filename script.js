@@ -12,7 +12,8 @@ function payBill() {
 
         // Datos a enviar al webhook
         const data = {
-            factura: factura
+            factura: factura,
+            cedula: cedula
         };
 
         // Enviar los datos al webhook usando fetch
