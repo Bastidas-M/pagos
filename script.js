@@ -41,6 +41,11 @@ function payBill() {
                 text: `Pago realizado con éxito para la factura ${invoice}.`,
                 icon: 'success',
                 confirmButtonText: 'Aceptar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirigir a la página de confirmación
+                    window.location.href = `confirmacion.html?name=${encodeURIComponent(name)}&invoice=${encodeURIComponent(invoice)}`;
+                }
             });
 
             // Opcional: Actualizar mensaje en el HTML
