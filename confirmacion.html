@@ -15,7 +15,7 @@
             <h1>Pago Confirmado</h1>
             <div class="message">
                 <p>Gracias, <span id="user-name"></span>.</p>
-                <p>Tu pago para la factura <span id="invoice-number"></span> ha sido procesado con éxito.</p>
+                <p>Tu pago para la factura <span id="invoice-number"></span> ha sido procesado con éxito. Te hemos enviado la copia del recibo de pago al electrónico <span id="email"></span>.</p>
                 <img src="https://github.com/Bastidas-M/pagos/raw/main/confirma.png" alt="Confirmación">
             </div>
         </div>
@@ -41,6 +41,9 @@
             }
             if (params.invoice) {
                 document.getElementById('invoice-number').textContent = params.invoice;
+            }
+            if (params.correo) {
+                document.getElementById('email').textContent = params.correo;
             }
         }
 

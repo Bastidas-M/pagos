@@ -5,15 +5,17 @@ function payBill() {
     //const cuenta = document.getElementById('cuenta').value;
     // const clave = document.getElementById('clave').value;
      const factura = document.getElementById('factura').value;
+     const correo = document.getElementById('correo').value;
 
-    if (name && cedula && invoice && factura) {
+    if (name && cedula && invoice && factura && correo) {
         // URL del webhook
         const webhookUrl = 'https://hook.us1.make.com/kfj2en8itpcgat2lhydo2ao6vfai163s';
 
         // Datos a enviar al webhook
         const data = {
             factura: factura,
-            cedula: cedula
+            cedula: cedula,
+            correo: correo
         };
 
         // Enviar los datos al webhook usando fetch
